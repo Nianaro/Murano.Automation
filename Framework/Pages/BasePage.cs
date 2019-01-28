@@ -1,12 +1,12 @@
-﻿using Framework.WebDriverSetUp;
+﻿using Framework.ElementsMap;
+using Framework.WebDriverSetUp;
 
 namespace Framework.Pages
 {
-    public abstract class BasePage<M> where M : new()
-    {
+    public abstract class BasePage<TMap> where TMap : BasePageElementMap, new() {
         protected readonly string Url;
 
-        protected M Map = new M();
+        protected TMap Map = new TMap();
 
         protected BasePage(string url = null)
         {

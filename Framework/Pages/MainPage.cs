@@ -7,17 +7,14 @@ using System.Drawing;
 
 namespace Framework.Pages
 {
-    public class MainPage<M> : BasePage<MainPageElementMap> where M : BasePageElementMap, new()
-    {
+    public class MainPage : BasePage<MainPageElementMap> {
         private const string Value = "value";
-
-        protected new M Map = new M();
 
         public MainPage() : base(URL.Host) {}
 
         public Rectangle GetCodeMirrorCodeArea()
         {
-            var element = GetWebElementWhenDisplayed(base.Map.CodeMirrorCode);
+            var element = GetWebElementWhenDisplayed(Map.CodeMirrorCode);
             return new Rectangle(element.Location.X, element.Location.Y,
                                 element.Size.Width, element.Size.Height);
         }
