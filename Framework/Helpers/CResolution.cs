@@ -72,9 +72,6 @@ namespace Framework.Helpers
     {
         public CResolution(int a, int b)
         {
-            Screen screen = Screen.PrimaryScreen;
-
-
             int iWidth = a;
             int iHeight = b;
 
