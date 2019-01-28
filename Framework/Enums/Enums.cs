@@ -1,5 +1,6 @@
 ﻿namespace Framework.Enums
 {
+	//по-хорошему, каждый enum выносить в отдельный класс
     public enum Language
     {
         CSharp,
